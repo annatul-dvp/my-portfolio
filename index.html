@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="css/hover-min.css" rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> -->
+  
+  <link href="css/style.css" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script defer src="js/main.js"></script>
+  <script defer src="js/slider.js"></script>
+  <script defer src="js/scroll-pages.js"></script>  
+
+  <title>Портфолио</title>
+</head>
+<body>
+  <header class="header">
+    <span class="header__title">Портфолио Анны</span>
+    <nav class="nav header__nav">
+      <ul class="list nav__list">
+        <li class="hvr-underline-reveal nav__item s-one-link">Обо мне</li>
+        <li class="hvr-underline-reveal nav__item s-two-link">Мои работы</li>
+        <li class="hvr-underline-reveal nav__item s-three-link">Немного анимации</li>
+      </ul>
+    </nav>
+    <a href="mailto:#" class="link header__link">email@email.com</a>
+  </header>	
+  <section class="container hero scroll s-one" data-section-name="s-one">
+    <div class="hero__info-block">
+      <h1 class="hero__title">
+        Добро пожаловать!
+      </h1>
+      <p class="hero__desc">
+        Здесь вы найдёте немного информации обо мне и сможете узнать меня поближе.
+      </p>
+      <button class="btn hero__btn">
+        Подробнее
+      </button>
+    </div>    
+    <div class="hero__imgs">
+      <div class="hero__img-back img-of-circle"></div>
+      <div class="hero__img-front"></div>
+    </div>
+  </section>
+  <section class="animated-wrap scroll s-two"  data-section-name="s-two">
+    <div class="animated-wrap__subblock falling-stars-bg">
+    </div>
+    <div class="container aboutme-block">
+      <h2 class="aboutme-block__title">
+        Обо мне
+      </h2>
+      <p class="aboutme-block__desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <ul class="list aboutme-block__list">
+        <li class="aboutme-block__item">
+          <h3 class="aboutme-block-list-item__title">
+            Something
+          </h3>
+          <p class="aboutme-block-list-item__desc">
+            Something Something Something SomethingSomethingSomethingSomething
+          </p>
+        </li>
+        <li class="aboutme-block__item">
+          <h3 class="aboutme-block-list-item__title">
+            Something
+          </h3>
+          <p class="aboutme-block-list-item__desc">
+            SomethingSomethingSomethingSomethingSomethingSomethingSomething
+          </p>
+        </li>
+        <li class="aboutme-block__item">
+          <h3 class="aboutme-block-list-item__title">
+            Something
+          </h3>
+          <p class="aboutme-block-list-item__desc">
+            SomethingSomethingSomethingSomethingSomethingSomethingSomething
+          </p>
+        </li>
+      </ul>
+      <div class="aboutme-block__animation"></div>
+    </div>
+  </section>
+  <section class="animated-wrap scroll s-three" data-section-name="s-three">
+    <div class="container info-block">
+      <h2 class="info-block__title">
+        Тадам!
+      </h2>
+      <div class="swiper info-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper info-swiper__wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide info-slide info-swiper__slide">
+            <h4 class="info-slide__name">Проект выполненные на Vue 2</h4>
+            <div class="info-slide__inf">
+              <p class="info-slide__desc">
+                В данном проекте не всё до конца реализовано, но проделанной работе можно оценить объем знаний по фреймворку.
+              </p>
+              <span>Ссылка на GitHub:</span>
+              <a class="link git-link dark-link" href="https://github.com/annatul-dvp/vue2-project-01-public ">https://github.com/annatul-dvp/vue2-project-01-public</a>
+              <div class="info-slide__btn-space">
+                <button class="btn info-slide__btn">
+                  <a class="link light-link btn__link" href="https://annatul-dvp.github.io/vue2-project01-toshow/#/">Открыть сайт</a>
+                </button>
+              </div>              
+            </div>
+            <div class="info-slide__img">
+              <picture class="info-slide-img">
+                <source srcset="imgs/vue-project-1.webp" media="(min-width: 600px)">
+                <img src="imgs/vue-project-1.jpg" alt="Vue Project">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-slide info-slide info-swiper__slide">
+            <div class="info-slide__name">
+              <h4>Name 2</h4>
+            </div>
+            <div class="info-slide__inf">
+              <p>Description</p>
+            </div>
+            <div class="info-slide__img"></div>
+          </div>
+          <div class="swiper-slide info-slide info-swiper__slide">
+            <div class="info-slide__name">
+              <h4>Name 3</h4>
+            </div>
+            <div class="info-slide__inf">
+              <p>Description</p>
+            </div>
+            <div class="info-slide__img"></div>
+          </div>
+          <div class="swiper-slide info-slide info-swiper__slide">
+            <div class="info-slide__name">
+              <h4>Name 4</h4>
+            </div>
+            <div class="info-slide__inf">
+              <p>Description</p>
+            </div>
+            <div class="info-slide__img"></div>
+          </div>
+          <div class="swiper-slide info-slide info-swiper__slide">
+            <div class="info-slide__name">
+              <h4>Name 5</h4>
+            </div>
+            <div class="info-slide__inf">
+              <p>Description</p>
+            </div>
+            <div class="info-slide__img"></div>
+          </div>
+        </div>
+     
+        <div class="swiper-button-prev info-slide__btn-prev"></div>
+        <div class="swiper-button-next info-slide__btn-next"></div>
+
+      </div>
+    </div>
+  </section>
+  <div class="container">
+
+  </div>
+  <footer class="container footer">
+
+  </footer>
+</body>
+</html>
