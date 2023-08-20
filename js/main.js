@@ -1,6 +1,6 @@
-let bgImages = document.querySelectorAll(".animated-wrap");
-
 gsap.registerPlugin(ScrollTrigger);
+
+let bgImages = document.querySelectorAll(".animated-wrap");
 
 for (let bg of bgImages) {
   gsap.fromTo(
@@ -22,41 +22,94 @@ for (let bg of bgImages) {
   );
 }
 
+/*Start settings for pages animation */
+gsap.set(".header__title", {
+  autoAlpha: 0,
+  x: 200,
+});
+gsap.set(".s-one-link", {
+  autoAlpha: 0,
+  x: 200,
+});
+gsap.set(".s-two-link", {
+  autoAlpha: 0,
+  x: 200,
+});
+gsap.set(".s-three-link", {
+  autoAlpha: 0,
+  x: 200,
+});
+gsap.set(".s-four-link", {
+  autoAlpha: 0,
+  x: 200,
+});
+gsap.set(".header__link", {
+  autoAlpha: 0,
+  x: 200,
+});
+gsap.set (".hero__title", {
+  autoAlpha: 0,
+  x: 80,    
+});
+gsap.set(".hero__desc", {
+  autoAlpha: 0,
+  x: 80,    
+});
+gsap.set(".hero__btn", {
+  autoAlpha: 0,
+});
+gsap.set(".hero__img-front", {
+  autoAlpha: 0,
+});
+gsap.set(".hero__img-back", {
+  autoAlpha: 0,
+  scale: 0.5,
+});
+
+/*Header animation */
+
 let headerTl = gsap.timeline();
 
 headerTl
   .add("header-start")
-  .from(".header__title", {
-    opacity: 0,
-    x: 200,
+  .to(".header__title", {
+    autoAlpha: 1,
+    x: 0,
     duration: 2, 
     ease: "expo.out",
   }, "header-start")
-  .from(".s-one-link", {
-    opacity: 0,
-    x: 200,
-    delay: 0.2,
+  .to(".s-one-link", {
+    autoAlpha: 1,
+    x: 0,
+    delay: .2,
     duration: 2, 
     ease: "expo.out",
   }, "header-start")
-  .from(".s-two-link", {
-    opacity: 0,
-    x: 200,
-    delay: 0.4,
+  .to(".s-two-link", {
+    autoAlpha: 1,
+    x: 0,
+    delay: .4,
     duration: 2, 
     ease: "expo.out",
   }, "header-start")
-  .from(".s-three-link", {
-    opacity: 0,
-    x: 200,
-    delay: 0.6,
+  .to(".s-three-link", {
+    autoAlpha: 1,
+    x: 0,
+    delay: .6,
     duration: 2, 
     ease: "expo.out",
   }, "header-start")
-  .from(".header__link", {
-    opacity: 0,
-    x: 200,
-    delay: 0.8,
+  .to(".s-four-link", {
+    autoAlpha: 1,
+    x: 0,
+    delay: .8,
+    duration: 2, 
+    ease: "expo.out",
+  }, "header-start")
+  .to(".header__link", {
+    autoAlpha: 1,
+    x: 0,
+    delay: 1,
     duration: 2, 
     ease: "expo.out",
   }, "header-start");
@@ -64,43 +117,46 @@ headerTl
 headerTl.play();
 
 /*Hero Page Animation*/
-let heroTl = gsap.timeline({delay:1.3});
+let heroTl = gsap.timeline({delay: .6,});
 
 heroTl  
-  .from (".hero__title", {
-    opacity: 0,
-    x: 80,    
+  .to (".hero__title", {
+    autoAlpha: 1,
+    x: 0,    
     duration: 2,
     ease: "expo.out",
   })
-  .from(".hero__desc", {
-    opacity: 0,
-    x: 80,    
+  .to(".hero__desc", {
+    autoAlpha: 1,
+    x: 0,    
     duration: 2,
     ease: "expo.out",
   }, ">-1.5")
-  .from(".hero__btn", {
-    opacity: 0,   
+  .to(".hero__btn", {
+    autoAlpha: 1, 
     duration: 3,
     ease: "expo.out",
   }, ">-1.4")
-  .from(".hero__img-front", {
-    opacity: 0, 
-    delay: 0.5,  
-    duration: 1.8,
+  .to(".hero__img-front", {
+    autoAlpha: 1,
+    delay: 0.3,  
+    duration: 1.5,
   }, "<")
-  .from(".hero__img-back", {
-    opacity: 0,   
-    scale: 0.5,
-    duration: 3,
+  .to(".hero__img-back", {
+    autoAlpha: 1,
+    scale: 1,
+    duration: 2,
     ease: "expo.out",
-  }, ">-0.3");
+  }, ">-0.2");
+
 
 heroTl.play();
 
+/*Buttons hover animation*/
+
 let heroBtn = document.querySelector(".hero__btn");
 
-heroBtn.addEventListener("mouseenter", () => {
+heroBtn.addEventListener("mouseover", () => {
   heroBtn.classList.toggle("animate__animated");
   heroBtn.classList.toggle("animate__rubberBand");
 });
@@ -109,6 +165,145 @@ heroBtn.addEventListener("mouseout", () => {
   heroBtn.classList.toggle("animate__animated");
   heroBtn.classList.toggle("animate__rubberBand");
 });
+
+let infoSlideBtns = document.querySelectorAll(".info-slide__btn");
+
+for (let btn of infoSlideBtns) {
+  
+  btn.addEventListener("mouseover", () => {
+    gsap.to(btn, {
+      duration: 2,
+      backgroundColor: "#D52027",
+    });
+  });
+  
+  btn.addEventListener("mouseout", () => {
+    gsap.to(btn, {
+      duration: 2,
+      backgroundColor: "#141024",
+    });
+  });
+
+}
+
+/*Aboutme block animation */
+let aboutmeItems = document.querySelectorAll(".aboutme-block__item");
+
+for (let item of aboutmeItems) {
+  item.addEventListener("mouseover", () => {
+    gsap.to(item, {
+      duration: 1,
+      scale: 1.1,
+      color: "#FFFFFF",
+      backgroundColor: "#D52027",
+      outlineColor: "#D52027",
+      outlineStyle: "solid",
+      outlineWidth: "2px7",
+      borderColor: "#FFFFFF",  
+      ease: "power2.out",
+    });
+  });
+  
+  item.addEventListener("mouseout", () => {
+    gsap.to(item, {
+      duration: 1,
+      scale: 1,
+      color: "#141024",
+      backgroundColor: "#FFFFFF",
+      outlineStyle: "none",
+      borderColor: "rgba(20,16,36, 0.2)",
+      ease: "power2.out",
+    });
+  });
+}
+
+let aboutmeItemOneLink = document.querySelector(".aboutme-item-one-link");
+let aboutmeItemTwoLink = document.querySelector(".aboutme-item-two-link");
+let aboutmeItemThreeLink = document.querySelector(".aboutme-item-three-link");
+
+let aboutmeItemOne = document.querySelector(".aboutme-item-one");
+let aboutmeItemTwo = document.querySelector(".aboutme-item-two");
+let aboutmeItemThree = document.querySelector(".aboutme-item-three");
+
+aboutmeItemOneLink.addEventListener("mouseover", () => {
+  gsap.to(aboutmeItemOne, {
+    duration: 1,
+    scale: 1.1,
+    color: "#FFFFFF",
+    backgroundColor: "#D52027",
+    outlineColor: "#D52027",
+    outlineStyle: "solid",
+    outlineWidth: "2px7",
+    borderColor: "#FFFFFF",  
+    ease: "power2.out",      
+  });
+});
+
+aboutmeItemOneLink.addEventListener("mouseout", () => {
+  gsap.to(aboutmeItemOne, {
+    duration: 1,
+    scale: 1,
+    color: "#141024",
+    backgroundColor: "#FFFFFF",
+    outlineStyle: "none",
+    borderColor: "rgba(20,16,36, 0.2)",
+    ease: "power2.out",        
+  });
+});
+
+aboutmeItemTwoLink.addEventListener("mouseover", () => {
+  gsap.to(aboutmeItemTwo, {
+    duration: 1,
+    scale: 1.1,
+    color: "#FFFFFF",
+    backgroundColor: "#D52027",
+    outlineColor: "#D52027",
+    outlineStyle: "solid",
+    outlineWidth: "2px7",
+    borderColor: "#FFFFFF",  
+    ease: "power2.out",
+  });
+});
+
+aboutmeItemTwoLink.addEventListener("mouseout", () => {
+  gsap.to(aboutmeItemTwo, {
+    duration: 1,
+    scale: 1,
+    color: "#141024",
+    backgroundColor: "#FFFFFF",
+    outlineStyle: "none",
+    borderColor: "rgba(20,16,36, 0.2)",
+    ease: "power2.out",
+  });
+});
+
+aboutmeItemThreeLink.addEventListener("mouseover", () => {
+  gsap.to(aboutmeItemThree, {
+    duration: 1,
+    scale: 1.1,
+    color: "#FFFFFF",
+    backgroundColor: "#D52027",
+    outlineColor: "#D52027",
+    outlineStyle: "solid",
+    outlineWidth: "2px7",
+    borderColor: "#FFFFFF",  
+    ease: "power2.out",
+  });
+});
+
+aboutmeItemThreeLink.addEventListener("mouseout", () => {
+  gsap.to(aboutmeItemThree, {
+    duration: 1,
+    scale: 1,
+    color: "#141024",
+    backgroundColor: "#FFFFFF",
+    outlineStyle: "none",
+    borderColor: "rgba(20,16,36, 0.2)",
+    ease: "power2.out",
+  });
+});
+
+
 
 /*Faling stars animation */
 let fallingStarsBg = document.querySelector(".falling-stars-bg");
@@ -177,3 +372,4 @@ function makeFallingStar(starType) {
 
   tl.play();
 }
+

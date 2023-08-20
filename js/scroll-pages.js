@@ -1,10 +1,10 @@
 (function () {
   $.scrollify({
-    section : "section",
+    section : "section, .footer",
     sectionName : "section-name",
-    // interstitialSection : "",
+    interstitialSection : ".footer",
     easing: "easeOutExpo",
-    scrollSpeed: 3000,
+    scrollSpeed: 1000,
     offset : 0,
     scrollbars: true,
     // standardScrollElements: "",
@@ -26,5 +26,8 @@
   });
   $(".s-three-link").click(function () {
     $.scrollify.move("#s-three");
+  });
+  $(".s-four-link").click(function () {
+    $.scrollify.move("#s-four");
   });
 })();

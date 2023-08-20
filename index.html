@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="imgs/icon-resume.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="css/hover-min.css" rel="stylesheet">  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -22,21 +23,23 @@
 
   <script defer src="js/main.js"></script>
   <script defer src="js/slider.js"></script>
-  <script defer src="js/scroll-pages.js"></script>  
+  <script defer src="js/scroll-pages.js"></script> 
+  <script defer src="js/shining-animation.js"></script>
 
   <title>Портфолио</title>
 </head>
 <body>
   <header class="header">
-    <span class="header__title">Портфолио Анны</span>
+    <span class="header__title">Портфолио Анны Тулупцевой</span>
     <nav class="nav header__nav">
       <ul class="list nav__list">
-        <li class="hvr-underline-reveal nav__item s-one-link">Обо мне</li>
-        <li class="hvr-underline-reveal nav__item s-two-link">Мои работы</li>
-        <li class="hvr-underline-reveal nav__item s-three-link">Немного анимации</li>
+        <li class="hvr-underline-reveal nav__item s-one-link">Главная</li>
+        <li class="hvr-underline-reveal nav__item s-two-link">Обо мне</li>
+        <li class="hvr-underline-reveal nav__item s-three-link">Мои работы</li>
+        <li class="hvr-underline-reveal nav__item s-four-link">Немного анимации</li>
       </ul>
     </nav>
-    <a href="mailto:#" class="link header__link">email@email.com</a>
+    <a href="mailto:anna.tuluptseva@yandex.ru" class="link header__link">anna.tuluptseva@yandex.ru</a>
   </header>	
   <section class="container hero scroll s-one" data-section-name="s-one">
     <div class="hero__info-block">
@@ -44,10 +47,10 @@
         Добро пожаловать!
       </h1>
       <p class="hero__desc">
-        Здесь вы найдёте немного информации обо мне и сможете узнать меня поближе.
+        Здесь вы найдёте немного информации обо мне, а также сможете познакомиться с мои работами.
       </p>
-      <button class="btn hero__btn">
-        Подробнее
+      <button class="btn hero__btn s-two-link">
+       Подробнее
       </button>
     </div>    
     <div class="hero__imgs">
@@ -62,33 +65,44 @@
       <h2 class="aboutme-block__title">
         Обо мне
       </h2>
-      <p class="aboutme-block__desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+      <div class="aboutme-block__desc">
+        <p class="desc">
+          Могу охарактеризовать себя, как <span class="with-cursor-pointer aboutme-item-one-link">любознательного</span>,
+          <span class="with-cursor-pointer aboutme-item-two-link">инициативного</span> и <span class="with-cursor-pointer aboutme-item-three-link">ответственного</span>
+          человека. В случае возникновения сложностей стараюсь всегда вначале самостоятельно тщательно изучить задачу,
+          ещё раз просмотрев документацию, поискав, сталкивался ли кто с похожим в интернете, только затем общаюсь
+          с вопросами к коллегам/знакомым.
+        </p>
+        <p class="desc">
+          Front-end разработку выбрала, так как нравится наблюдать проделанную мной работу на экране, видеть, как много
+          удивительного я могу создать при помощи кода. Сама же сфера веб-разработки привлекает тем, что она не перест
+          развиваться и, кажется, что в ней всегда будет что-то новое для изучения и развития.
+        </p>        
+      </div>
       <ul class="list aboutme-block__list">
-        <li class="aboutme-block__item">
-          <h3 class="aboutme-block-list-item__title">
-            Something
+        <li class="item aboutme-item-one aboutme-block__item">
+          <h3 class="h3 item__title">
+            Любознательность
           </h3>
-          <p class="aboutme-block-list-item__desc">
+          <!-- <p class="item__desc">
             Something Something Something SomethingSomethingSomethingSomething
-          </p>
+          </p> -->
         </li>
-        <li class="aboutme-block__item">
-          <h3 class="aboutme-block-list-item__title">
-            Something
+        <li class="item aboutme-item-two aboutme-block__item">
+          <h3 class="h3 item__title">
+            Инициативность
           </h3>
-          <p class="aboutme-block-list-item__desc">
+          <!-- <p class="item__desc">
             SomethingSomethingSomethingSomethingSomethingSomethingSomething
-          </p>
+          </p> -->
         </li>
-        <li class="aboutme-block__item">
-          <h3 class="aboutme-block-list-item__title">
-            Something
+        <li class="item aboutme-item-three aboutme-block__item">
+          <h3 class="h3 item__title">
+            Ответственность
           </h3>
-          <p class="aboutme-block-list-item__desc">
+          <!-- <p class="item__desc">
             SomethingSomethingSomethingSomethingSomethingSomethingSomething
-          </p>
+          </p> -->
         </li>
       </ul>
       <div class="aboutme-block__animation"></div>
@@ -97,69 +111,119 @@
   <section class="animated-wrap scroll s-three" data-section-name="s-three">
     <div class="container info-block">
       <h2 class="info-block__title">
-        Тадам!
+        Мои проекты
       </h2>
+      <p class="info-block__desc">
+        В данном блоке вы наёдете выполненные мной проекты во время моего обучения на онлайн платформе Skillbox, а также в процессе самостоятельной практики.
+      </p>
       <div class="swiper info-swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper info-swiper__wrapper">
           <!-- Slides -->
           <div class="swiper-slide info-slide info-swiper__slide">
-            <h4 class="info-slide__name">Проект выполненные на Vue 2</h4>
+            <h3 class="h3 info-slide__name">Проект, выполненный на Vue 2</h3>
             <div class="info-slide__inf">
               <p class="info-slide__desc">
                 В данном проекте не всё до конца реализовано, но проделанной работе можно оценить объем знаний по фреймворку.
               </p>
-              <span>Ссылка на GitHub:</span>
-              <a class="link git-link dark-link" href="https://github.com/annatul-dvp/vue2-project-01-public ">https://github.com/annatul-dvp/vue2-project-01-public</a>
+              <span class="info-slide__sub-title">Ссылка на GitHub:</span>
+              <a class="link git-link dark-link info-slide__link" href="https://github.com/annatul-dvp/vue2-project-01-public ">https://github.com/annatul-dvp/vue2-project-01-public</a>
               <div class="info-slide__btn-space">
                 <button class="btn info-slide__btn">
                   <a class="link light-link btn__link" href="https://annatul-dvp.github.io/vue2-project01-toshow/#/">Открыть сайт</a>
                 </button>
               </div>              
             </div>
-            <div class="info-slide__img">
-              <picture class="info-slide-img">
-                <source srcset="imgs/vue-project-1.webp" media="(min-width: 600px)">
-                <img src="imgs/vue-project-1.jpg" alt="Vue Project">
-              </picture>
+            <div class="info-slide__img info-slide-img-zero">
             </div>
           </div>
           <div class="swiper-slide info-slide info-swiper__slide">
-            <div class="info-slide__name">
-              <h4>Name 2</h4>
-            </div>
+            <h3 class="h3 info-slide__name">Проект, перенесённый с Vue 2 на Vue 3</h3>
             <div class="info-slide__inf">
-              <p>Description</p>
+              <p class="info-slide__desc">
+                В данном проекте не всё до конца реализовано, но проделанной работе можно оценить объем знаний по фреймворку.
+              </p>
+              <span class="info-slide__sub-title">Ссылка на GitHub:</span>
+              <a class="link git-link dark-link info-slide__link" href="https://github.com/annatul-dvp/vue3-project01-public">https://github.com/annatul-dvp/vue3-project01-public</a>
+              <div class="info-slide__btn-space">
+                <button class="btn info-slide__btn">
+                  <a class="link light-link btn__link" href="https://annatul-dvp.github.io/vue3-project01-to-show/#/">Открыть сайт</a>
+                </button>
+              </div>              
             </div>
-            <div class="info-slide__img"></div>
+            <div class="info-slide__img info-slide-img-one">
+            </div>
           </div>
           <div class="swiper-slide info-slide info-swiper__slide">
-            <div class="info-slide__name">
-              <h4>Name 3</h4>
-            </div>
+            <h3 class="h3 info-slide__name">Email вёрстка</h3>
             <div class="info-slide__inf">
-              <p>Description</p>
+              <p class="info-slide__desc">
+                
+              </p>
+              <span class="info-slide__sub-title">Ссылка на GitHub:</span>
+              <a class="link git-link dark-link info-slide__link" href="https://github.com/annatul-dvp/blanchard-email">https://github.com/annatul-dvp/blanchard-email</a>
+              <div class="info-slide__btn-space">
+                <button class="btn info-slide__btn">
+                  <a class="link light-link btn__link" href="https://annatul-dvp.github.io/blanchard-email/#/">Открыть сайт</a>
+                </button>
+              </div>              
             </div>
-            <div class="info-slide__img"></div>
+            <div class="info-slide__img info-slide-img-two">
+            </div>
           </div>
           <div class="swiper-slide info-slide info-swiper__slide">
-            <div class="info-slide__name">
-              <h4>Name 4</h4>
-            </div>
+            <h3 class="h3 info-slide__name">Вёрстка сайта "Евклид"</h3>
             <div class="info-slide__inf">
-              <p>Description</p>
+              <p class="info-slide__desc">
+                В данном проекте реализовано адаптивная вёрстка сайта "Евклид. Проектные системы". При вёрстке сайта использовалась техника Pixel Perfect.
+              </p>
+              <span class="info-slide__sub-title">Ссылка на GitHub:</span>
+              <a class="link git-link dark-link info-slide__link" href="https://github.com/annatul-dvp/evklid ">https://github.com/annatul-dvp/evklid</a>
+              <span class="info-slide__sub-title">Ссылка на макет проекта в Figma:</span>
+              <a class="link git-link dark-link info-slide__link" href="https://www.figma.com/file/9ZBnSDaQlGmp4CcvgxVQwR/Cld?type=design&node-id=406480-3833&mode=design&t=CWsaRn6EnBJbxwyg-0 ">Макет</a>
+              <div class="info-slide__btn-space">
+                <button class="btn info-slide__btn">
+                  <a class="link light-link btn__link" href="https://annatul-dvp.github.io/evklid/">Открыть сайт</a>
+                </button>
+              </div>              
             </div>
-            <div class="info-slide__img"></div>
+            <div class="info-slide__img info-slide-img-three">
+            </div>
           </div>
           <div class="swiper-slide info-slide info-swiper__slide">
-            <div class="info-slide__name">
-              <h4>Name 5</h4>
-            </div>
+            <h3 class="h3 info-slide__name">Вёрстка с использованием сетки (Grid)</h3>
             <div class="info-slide__inf">
-              <p>Description</p>
+              <p class="info-slide__desc">
+                В данном проекте реализована десктопная версия сайта с использованием системы сеток библиотеки Bootstrap. 
+              </p>
+              <span class="info-slide__sub-title">Ссылка на GitHub:</span>
+              <a class="link git-link dark-link info-slide__link" href="https://github.com/annatul-dvp/basic-grid">https://github.com/annatul-dvp/basic-grid</a>
+              <div class="info-slide__btn-space">
+                <button class="btn info-slide__btn">
+                  <a class="link light-link btn__link" href="https://annatul-dvp.github.io/basic-grid/#/">Открыть сайт</a>
+                </button>
+              </div>              
             </div>
-            <div class="info-slide__img"></div>
+            <div class="info-slide__img info-slide-img-four">
+            </div>
           </div>
+          <div class="swiper-slide info-slide info-swiper__slide">
+            <h3 class="h3 info-slide__name">Проект 5</h3>
+            <div class="info-slide__inf">
+              <p class="info-slide__desc">
+                В данном проекте не всё до конца реализовано, но проделанной работе можно оценить объем знаний по фреймворку.
+              </p>
+              <span class="info-slide__sub-title">Ссылка на GitHub:</span>
+              <a class="link git-link dark-link info-slide__link" href="https://github.com/annatul-dvp/vue2-project-01-public ">https://github.com/annatul-dvp/vue2-project-01-public</a>
+              <div class="info-slide__btn-space">
+                <button class="btn info-slide__btn">
+                  <a class="link light-link btn__link" href="https://annatul-dvp.github.io/vue2-project01-toshow/#/">Открыть сайт</a>
+                </button>
+              </div>              
+            </div>
+            <div class="info-slide__img info-slide-img-six">
+            </div>
+          </div>          
         </div>
      
         <div class="swiper-button-prev info-slide__btn-prev"></div>
@@ -168,11 +232,31 @@
       </div>
     </div>
   </section>
-  <div class="container">
+  <section class="scroll s-four" data-section-name="s-four">
+    <div class="works-block">
+      <div class="animation-work works-block__animation">
+        <button class="btn animation-work__start">
+          Запустить анимацию
+        </button>
+      </div>
+      <div class="shining-animation-block animation-work works-block__animation">
+        <div class="stage">
 
-  </div>
-  <footer class="container footer">
-
+        </div>
+        <button class="btn animation-work__start">
+          Запустить анимацию
+        </button>
+      </div>      
+      <div class="animation-work works-block__animation">
+        <button class="btn animation-work__start">
+          Запустить анимацию
+        </button>
+      </div>
+    </div>
+  </section>  
+  <footer class="footer">
+    <span class="footer__title">Портфолио Анны Тулупцевой</span>
+    <a href="mailto:anna.tuluptseva@yandex.ru" class="link footer__link">anna.tuluptseva@yandex.ru</a>
   </footer>
 </body>
 </html>
