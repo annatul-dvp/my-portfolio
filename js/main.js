@@ -1,26 +1,26 @@
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-let bgImages = document.querySelectorAll(".animated-wrap");
+// let bgImages = document.querySelectorAll(".animated-wrap");
 
-for (let bg of bgImages) {
-  gsap.fromTo(
-    bg,
-    {
-        clipPath: "circle(0% at 75% 20%)",
-    },
-    {
-        clipPath: "circle(75% at 50% 50%)",
-        ease: "none",
+// for (let bg of bgImages) {
+//   gsap.fromTo(
+//     bg,
+//     {
+//         clipPath: "circle(0% at 75% 20%)",
+//     },
+//     {
+//         clipPath: "circle(75% at 50% 50%)",
+//         ease: "none",
 
-        scrollTrigger: {
-            trigger: bg,
-            scrub: 1,
-            start: "top center",
-            end: "top center-=200",
-        },
-    }
-  );
-}
+//         scrollTrigger: {
+//             trigger: bg,
+//             scrub: 1,
+//             start: "top center",
+//             end: "top center-=200",
+//         },
+//     }
+//   );
+// }
 
 /*Start settings for pages animation */
 gsap.set(".header__title", {
@@ -139,15 +139,16 @@ heroTl
   }, ">-1.4")
   .to(".hero__img-front", {
     autoAlpha: 1,
-    delay: 0.3,  
-    duration: 1.5,
+    // delay: 0.1,  
+    duration: 2,
+    ease: "expo.out",
   }, "<")
   .to(".hero__img-back", {
     autoAlpha: 1,
     scale: 1,
     duration: 2,
     ease: "expo.out",
-  }, ">-0.2");
+  }, ">-0.8");
 
 
 heroTl.play();
