@@ -21,6 +21,7 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <script defer src="js/resize.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/slider.js"></script>
   <script defer src="js/scroll-pages.js"></script> 
@@ -84,25 +85,16 @@
           <h3 class="h3 item__title">
             Любознательность
           </h3>
-          <!-- <p class="item__desc">
-            Something Something Something SomethingSomethingSomethingSomething
-          </p> -->
         </li>
         <li class="item aboutme-item-two aboutme-block__item">
           <h3 class="h3 item__title">
             Инициативность
           </h3>
-          <!-- <p class="item__desc">
-            SomethingSomethingSomethingSomethingSomethingSomethingSomething
-          </p> -->
         </li>
         <li class="item aboutme-item-three aboutme-block__item">
           <h3 class="h3 item__title">
             Ответственность
           </h3>
-          <!-- <p class="item__desc">
-            SomethingSomethingSomethingSomethingSomethingSomethingSomething
-          </p> -->
         </li>
       </ul>
       <div class="aboutme-block__animation"></div>
@@ -207,7 +199,7 @@
             <div class="info-slide__img info-slide-img-four">
             </div>
           </div>
-          <div class="swiper-slide info-slide info-swiper__slide">
+          <!-- <div class="swiper-slide info-slide info-swiper__slide">
             <h3 class="h3 info-slide__name">Проект 5</h3>
             <div class="info-slide__inf">
               <p class="info-slide__desc">
@@ -223,34 +215,45 @@
             </div>
             <div class="info-slide__img info-slide-img-six">
             </div>
-          </div>          
+          </div>           -->
         </div>
+
+        <div class="swiper-pagination info-swiper__pagination"></div>
      
-        <div class="swiper-button-prev info-slide__btn-prev"></div>
-        <div class="swiper-button-next info-slide__btn-next"></div>
+        <div class="swiper-button-prev info-swiper__btn-prev"></div>
+        <div class="swiper-button-next info-swiper__btn-next"></div>
 
       </div>
     </div>
   </section>
   <section class="scroll s-four" data-section-name="s-four">
     <div class="works-block">
-      <div class="animation-work works-block__animation">
-        <button class="btn animation-work__start">
-          Запустить анимацию
-        </button>
-      </div>
-      <div class="shining-animation-block animation-work works-block__animation">
-        <div class="stage">
-
+      <h2 class="h2 works-block__title">
+        Мои анимации
+      </h2>
+      <p class="works-block__desc">
+        В данном блоке представлены работы по анимации выполненные мной в ходе самостоятельной практики
+        и в процессе изучения различных библиотек по анимации. 
+      </p> 
+      <div class="swiper animation-works-swiper works-block__animation">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->          
+          <div class="swiper-slide shining-animation-block animation-work works-block__animation">
+            <div class="stage">
+    
+            </div>
+            <button class="btn animation-work__start">
+              Запустить анимацию
+            </button>
+          </div>             
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
         </div>
-        <button class="btn animation-work__start">
-          Запустить анимацию
-        </button>
-      </div>      
-      <div class="animation-work works-block__animation">
-        <button class="btn animation-work__start">
-          Запустить анимацию
-        </button>
+        <div class="swiper-button-prev animation-works-swiper__btn-prev"></div>
+        <div class="swiper-button-next animation-works-swiper__btn-next"></div>
+
+        <div class="swiper-pagination animation-works-swiper__pagination"></div>
       </div>
     </div>
   </section>  

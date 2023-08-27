@@ -1,22 +1,22 @@
+/*Info Block slider*/
 const infoSlider = new Swiper(".info-swiper", {
 	slidesPerView: 1,
   speed: 200,
   spaceBetween: 106,
   centeredSlides: true,
   // mousewheel: true,
-	navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  pagination: {
+    el: '.info-swiper__pagination',
+    clickable: true,
   },
-	// scrollbar: {
-  //   el: ".swiper-scrollbar",
-  //   draggable: true,
-	// 	hide:true,
-  // },
+	navigation: {
+    nextEl: ".info-swiper__btn-next",
+    prevEl: ".info-swiper__btn-prev",
+  },
 });
 
-let btnPrevInfoSlide = document.querySelector(".info-slide__btn-prev");
-let btnNextInfoSlide = document.querySelector(".info-slide__btn-next");
+let btnPrevInfoSlide = document.querySelector(".info-swiper__btn-prev");
+let btnNextInfoSlide = document.querySelector(".info-swiper__btn-next");
 let isInfoSlideAnimationPlayed = false;
 
 function changeInfoSlideAnimation() {
@@ -93,3 +93,20 @@ infoSlider.on("slideChangeTransitionEnd", function() {
   slideTl.play();
 });
 
+/*Animation Block slider*/
+
+const animSlider = new Swiper(".animation-works-swiper", {
+	slidesPerView: 1,
+  speed: 200,
+  // spaceBetween: 106,
+  centeredSlides: true,
+  // mousewheel: true,
+  pagination: {
+    el: '.animation-works-swiper__pagination',
+    clickable: true,
+  },
+	navigation: {
+    nextEl: ".animation-works-swiper__btn-next",
+    prevEl: ".animation-works-swiper__btn-prev",
+  },
+});

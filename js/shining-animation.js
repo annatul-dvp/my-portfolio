@@ -1,14 +1,38 @@
 const count = 50;
 const blurCount = 10;
 const stage = document.querySelector(".stage");
+const btnStart = document.querySelector(".animation-work__start");
+let isAnimationStarted = false;
 
-for (let i=0; i < count; i++) {
-  setTimeout(() => {
-    makeLight(i);
-  }, 50 * i)
-}
+btnStart.addEventListener("click", () => {
+  console.log(isAnimationStarted);
+
+  if (isAnimationStarted) {
+    btnStart.innerHTML = "Запустить анимацию";
+    isAnimationStarted = false;
+    // stage.innerHTML = "";
+  } else {
+    btnStart.innerHTML = "Завершить анимацию";
+    isAnimationStarted = true;
+    for (let i=0; i < count; i++) {
+      console.log(i);
+      setTimeout(() => {
+        makeLight(i);
+      }, 50 * i);    
+    }
+  }
+});
+
+// for (let i=0; i < count; i++) {
+//   setTimeout(() => {
+//     makeLight(i);
+//   }, 50 * i)
+// }
 
 function makeLight(i) {
+  if (!isAnimationStarted) {
+
+  }
   let span = document.createElement("span");
   if (i < blurCount) {
     span.classList.add("blur");
@@ -32,7 +56,9 @@ function makeLight(i) {
     paused: true,
     onComplete: () => {
       span.remove();
-      makeLight(i);
+      if (isAnimationStarted) {
+        makeLight(i);
+      }      
     },
   });
 
