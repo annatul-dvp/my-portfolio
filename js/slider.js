@@ -6,7 +6,7 @@ const infoSlider = new Swiper(".info-swiper", {
   centeredSlides: true,
   // mousewheel: true,
   pagination: {
-    el: '.info-swiper__pagination',
+    el: ".info-swiper__pagination",
     clickable: true,
   },
 	navigation: {
