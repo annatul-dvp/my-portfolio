@@ -31,20 +31,20 @@
 </head>
 <body>
   <header class="header">
-    <span class="header__title">Портфолио Анны Тулупцевой</span>
+    <span class="header__title" tabindex="0">Портфолио Анны Тулупцевой</span>
     <nav class="nav header__nav">
       <ul class="list nav__list">
-        <li class="hvr-underline-reveal nav__item s-one-link">Главная</li>
-        <li class="hvr-underline-reveal nav__item s-two-link">Обо мне</li>
-        <li class="hvr-underline-reveal nav__item s-three-link">Мои работы</li>
-        <li class="hvr-underline-reveal nav__item s-four-link">Немного анимации</li>
+        <li class="hvr-underline-reveal nav__item s-one-link" tabindex="0">Главная</li>
+        <li class="hvr-underline-reveal nav__item s-two-link" tabindex="0">Обо мне</li>
+        <li class="hvr-underline-reveal nav__item s-three-link" tabindex="0">Мои работы</li>
+        <li class="hvr-underline-reveal nav__item s-four-link" tabindex="0">Немного анимации</li>
       </ul>
     </nav>
     <a href="mailto:anna.tuluptseva@yandex.ru" class="link header__link">anna.tuluptseva@yandex.ru</a>
   </header>	
   <section class="container hero scroll s-one" data-section-name="s-one">
     <div class="hero__info-block">
-      <h1 class="hero__title">
+      <h1 class="hero__title" tabindex="0">
         Добро пожаловать!
       </h1>
       <p class="hero__desc">
@@ -63,7 +63,7 @@
     <div class="animated-wrap__subblock falling-stars-bg">
     </div>
     <div class="container aboutme-block">
-      <h2 class="h2 aboutme-block__title">
+      <h2 class="h2 aboutme-block__title" tabindex="0">
         Обо мне
       </h2>
       <div class="aboutme-block__desc">
@@ -80,18 +80,18 @@
           развиваться и, кажется, что в ней всегда будет что-то новое для изучения и развития.
         </p>        
       </div>
-      <ul class="list aboutme-block__list">
-        <li class="item aboutme-item-one aboutme-block__item">
+      <ul class="list aboutme-block__list" tabindex="0">
+        <li class="item aboutme-item-one aboutme-block__item" tabindex="0">
           <h3 class="h3 item__title">
             Любознательность
           </h3>
         </li>
-        <li class="item aboutme-item-two aboutme-block__item">
+        <li class="item aboutme-item-two aboutme-block__item" tabindex="0">
           <h3 class="h3 item__title">
             Инициативность
           </h3>
         </li>
-        <li class="item aboutme-item-three aboutme-block__item">
+        <li class="item aboutme-item-three aboutme-block__item" tabindex="0">
           <h3 class="h3 item__title">
             Ответственность
           </h3>
@@ -102,7 +102,7 @@
   </section>
   <section class="animated-wrap scroll s-three" data-section-name="s-three">
     <div class="container info-block">
-      <h2 class="h2 info-block__title">
+      <h2 class="h2 info-block__title" tabindex="0">
         Мои проекты
       </h2>
       <p class="info-block__desc">
@@ -237,7 +237,7 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->          
-          <div class="swiper-slide shining-animation-block animation-work works-block__animation">
+          <div class="swiper-slide animation-works-slide shining-animation-block animation-work">
             <div class="stage">
     
             </div>
@@ -245,8 +245,13 @@
               Запустить анимацию
             </button>
           </div>             
-          <div class="swiper-slide works-block__animation">Slide 2</div>
-          <div class="swiper-slide works-block__animation">Slide 3</div>
+          <div class="swiper-slide animation-works-slide">
+            <div class="paper-stage">
+
+            </div>
+            <h3 class="h3 animation-works-slide__title">Внимание! Данна анимация доступна для просмотра только на компьютерах.</h3>
+          </div>
+          <div class="swiper-slide animation-works-slide">Slide 3</div>
         </div>
         <div class="swiper-button-prev animation-works-swiper__btn-prev"></div>
         <div class="swiper-button-next animation-works-swiper__btn-next"></div>
