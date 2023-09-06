@@ -309,12 +309,10 @@ aboutmeItemThreeLink.addEventListener("mouseout", () => {
 /*Faling stars animation */
 let fallingStarsBg = document.querySelector(".falling-stars-bg");
 let fallingStarsTrigger = document.querySelector(".aboutme-block__title");
-let smtg = document.querySelector(".aboutme-block__title");
 const amountFallingStars = 30;
 let amount = 0;
 
 fallingStarsTrigger.addEventListener("mouseenter", () => {
-  console.log('In'); 
   for (let i=0; i < amountFallingStars; i++) {
     setTimeout(() => {
       if (i%2 === 0) {
