@@ -30,9 +30,6 @@ btnStart.addEventListener("click", () => {
 // }
 
 function makeLight(i) {
-  if (!isAnimationStarted) {
-
-  }
   let span = document.createElement("span");
   if (i < blurCount) {
     span.classList.add("blur");
