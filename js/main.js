@@ -181,7 +181,7 @@ for (let btn of infoSlideBtns) {
   btn.addEventListener("mouseout", () => {
     gsap.to(btn, {
       duration: 2,
-      backgroundColor: "#141024",
+      backgroundColor: "#FFFFFF",
     });
   });
 

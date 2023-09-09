@@ -369,6 +369,11 @@ html {
 }
 
 /*Info Block styles*/
+.info-block {
+	background-color: var(--main-bg-color);
+	color: var(--white-color);
+}
+
 .info-block__title {
 	width: fit-content;
 	margin-top: calc(5 * var(--vh));;
@@ -399,7 +404,16 @@ html {
 .info-swiper {
 	height: calc(50 * var(--vh));
 	width: 100%;
-	padding: 3px 100px;
+	padding: 30px 100px;
+	/* background-color: var(--white-color);
+	color: var(--main-bg-color);
+	border-radius: 5px; */
+	/* border: 1px solid var(--white-color); */
+	border-radius: 5px;
+	box-shadow: 5px 0 15px 5px rgba(255, 255, 255, 0.5),
+							-5px 0 15px 5px rgba(255, 255, 255, 0.5),
+							0 -5px 15px 5px rgba(255, 255, 255, 0.5),
+							0 5px 15px 5px rgba(255, 255, 255, 0.5);
 }
 
 .info-swiper__slide {
@@ -507,7 +521,6 @@ html {
 	flex-basis: 45%;
 	font-size: 2vh;
 	font-weight: 400;
-	overflow-y: hidden;	
 	padding-right: 1.5vw;
 	cursor: default;
 }
@@ -530,19 +543,20 @@ html {
 	margin-right: 3px;
 	padding-top: 3vh;
 	padding-bottom: 3vh;
-	background-color: var(--main-bg-color);	
+	/* background-color: var(--main-bg-color);	 */
+	background-color: var(--white-color);	
 }
 
 .info-slide__btn:focus-visible {
-	outline: 2px solid var(--main-bg-color);;
-	border: 2px solid var(--white-color);
+	outline: 2px solid var(--white-color);;
+	border: 2px solid var(--main-bg-color);
 }
 
 .info-slide__img {
 	flex-grow: 1;
 	flex-basis: 50%;
 	border-radius: 20px;
-	border: 20px solid rgba(20,16,36, 1);
+	border: 20px solid var(--white-color);
 	overflow: hidden;
 }
 
@@ -821,11 +835,13 @@ html {
 .drink-item_moving {
 	opacity: 1;
 	transform: translateX(0);
-	transition: all 2s ease-out;
+	transition: opacity 2s ease-out;
+	transition: translateX 2s ease-out;
 }
 .drink-item_fade {
 	opacity: 0;
-	transition: all 1s ease-out;;
+	transition: opacity 2s ease-out;
+	transition: translateX 2s ease-out;
 }
 
 .drink-item_static {
@@ -1162,23 +1178,29 @@ html {
 	.info-swiper {
 		flex-grow: 1;
 		height: calc(50 * var(--vh));
-		padding: calc(0.5 * var(--vh)) 0px calc(0.5 * var(--vh)) 0px;
+		padding: 20px 10px;
+		box-shadow: 3px 0 6px 3px rgba(255, 255, 255, 0.5),
+							-3px 0 6px 3px rgba(255, 255, 255, 0.5),
+							0 -3px 6px 3px rgba(255, 255, 255, 0.5),
+							0 3px 6px 3px rgba(255, 255, 255, 0.5);
 	}
 
 	.info-swiper__pagination {
 		display: flex;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	.info-swiper__pagination  .swiper-pagination-bullet{
 		border-radius: 0;
 		flex-grow: 1;
-		background-color: rgba(20, 16, 36, 0.5);;
+		background-color: rgba(255, 255, 255, 0.5);;
 	} 
 
 	.info-swiper__pagination .swiper-pagination-bullet-active {
 		border-radius: 0;
 		flex-grow: 1;
-		background-color: var(--main-bg-color);
+		background-color: var(--white-color);
 	}
 
 	.info-swiper__btn-prev, .info-swiper__btn-next {
@@ -1261,7 +1283,30 @@ html {
 		background-color: var(--red-color);
 	}
 
-	/*Buttons for startin cup animation*/
+	/*cup animation*/
+	.drink-item {
+		transform: translateX(0);
+	}
+
+	.drink-item_moving {
+		transition: opacity 2s ease-in-out;
+	}
+	.drink-item_fade {
+		transition: opacity 1s ease-in-out;
+	}
+
+	.plate {
+		transform: translate3d(-50%,0,0);
+		backface-visibility: hidden;
+	}
+
+	.cup {
+		transform: translate3d(0,0,0);
+		backface-visibility: hidden;
+	}
+	
+
+	/*Buttons for starting cup animation*/
 	.animation-works-slide__buttons {
 		justify-content: space-between;
 		align-items: center;
@@ -1402,7 +1447,7 @@ html {
 	}
 	
 	.cup__handle {
-		right: -27px;
+		right: -26px;
 		top: 2px; 
 		width: 60px;
 		height: 78px;
