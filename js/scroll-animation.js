@@ -1,53 +1,52 @@
-gsap.registerPlugin(ScrollToPlugin);
+console.log("Я работаю!");
 
-// pages scrolling animation with gsap
-// let tlPages = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".s-two",
-//     start: "top bottom",
-//     end: "40% bottom",
-//     scrub: true,
-//     markers: true,
-//   }
-// });
+let scrollSTwoTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#s-two",
+    start: "top center",
+    end: "+=200", // end after scrolling 500px beyond the start
+    scrub: 1,
+    markers: false,
+  }
+});
 
-// gsap.from(".s-two", {
-//   x: "-100%",
-  
-// });
+scrollSTwoTl.from("#s-two", {
+  x: "-100%",
+  delay: 0,
+  duration: 2,
+  ease: "elastic.out(1, 0.5)",
+});
 
-// gsap.from(".s-three", {
-//   x: "100%",
-//   scrollTrigger: {
-//     trigger: ".s-three",
-//     start: "top bottom",
-//     end: "40% bottom",
-//     scrub: true,
-//     markers: true,
-//   }
-// });
+let scrollSThreeTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#s-three",
+    start: "top center",
+    end: "bottom center",
+    scrub: false,
+    markers: false,
+  }
+});
 
-// gsap.from(".s-four", {
-//   x: "-100%",
-//   scrollTrigger: {
-//     trigger: ".s-four",
-//     start: "top bottom",
-//     end: "top 20%",
-//     scrub: true,
-//     markers: true,
-//   }
-// });
+scrollSThreeTl.from("#s-three", {
+  x: "+100%",
+  delay: 0,
+  duration: 1.5,
+  ease: "power4.out",
+});
 
-//smooth scroll
-const lenis = new Lenis();
+let scrollSFourTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#s-four",
+    start: "top center",
+    end: "bottom center",
+    scrub: false,
+    markers: false,
+  }
+});
 
-lenis.on('scroll', (e) => {
-  // console.log(e);
-})
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
+scrollSFourTl.from("#s-four", {
+  x: "-100%",
+  delay: 0,
+  duration: 1.5,
+  ease: "power4.out",
+});

@@ -10,9 +10,6 @@ let cupAnimationEl = document.querySelector(".cup");
 drinkBtn.addEventListener("click", () => {
 
   if (isDrinkActive) {
-    console.log("Нет кофе");
-    // drinkImg.classList.remove("drink-item-moving");
-    // drinkImg.classList.add("drink-item");
     plateAnimationEl.classList.remove("plate_visible");
     plateAnimationEl.classList.add("plate_fade");
     cupAnimationEl.classList.remove("cup_visible");
@@ -20,9 +17,6 @@ drinkBtn.addEventListener("click", () => {
     drinkBtn.innerHTML = "Выпить кофе";
     isDrinkActive = false;    
   } else {
-    console.log("Есть кофе");
-    // drinkImg.classList.remove("drink-item");
-    // drinkImg.classList.add("drink-item-moving");
     plateAnimationEl.classList.remove("plate_fade");
     plateAnimationEl.classList.add("plate_visible");
     cupAnimationEl.classList.remove("cup_fade");

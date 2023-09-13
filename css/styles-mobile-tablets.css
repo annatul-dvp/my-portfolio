@@ -21,6 +21,7 @@
   }
 
   .header {
+    position: fixed;
     width: 100%;
     padding-left: var(--container-padding-big);
     padding-right: var(--container-padding-big);
@@ -212,6 +213,7 @@
   }
 
   .header {
+    position: fixed;
     width: 100%;
     padding-left: var(--container-padding-big);
     padding-right: var(--container-padding-big);
@@ -442,6 +444,7 @@
   }
 
   .header {
+    position: fixed;
     height: var(--header-height);
   }
 
@@ -536,6 +539,7 @@
   }
 
   .header {
+    position: fixed;
     width: 100%;
     padding-left: var(--container-padding-big);
     padding-right: var(--container-padding-big);
@@ -873,8 +877,8 @@
     --circle--border-width: 30px;
     --container-padding-big: 20px;
     --container-padding-middle: 20px;
-    --swiper-pagination-bullet-width: 30px;
-    --swiper-pagination-bullet-height: 30px;
+    --swiper-pagination-bullet-width: 20px;
+    --swiper-pagination-bullet-height: 20px;
     --swiper-navigation-sides-offset: 4px;
     --swiper-navigation-size: 22px;
   }
@@ -888,6 +892,7 @@
   }
 
   .header {
+    position: fixed;
     width: 100%;
     height: var(--header-height);
     padding-left: var(--container-padding-big);
@@ -1222,9 +1227,9 @@
 
 
 /* Media Query for Mobile Devices */
-@media (max-width: 480px) {
+@media (max-width: 480px){
   /* body {
-      background-color: red;
+      background-color: green;
   } */
 
   :root {
@@ -1233,8 +1238,8 @@
     --circle--border-width: 30px;
     --container-padding-big: 20px;
     --container-padding-middle: 20px;
-    --swiper-pagination-bullet-width: 30px;
-    --swiper-pagination-bullet-height: 30px;
+    --swiper-pagination-bullet-width: 20px;
+    --swiper-pagination-bullet-height: 20px;
     --swiper-pagination-bottom: 20px;
     --swiper-navigation-sides-offset: 4px;
     --swiper-navigation-size: 22px;
@@ -1249,6 +1254,7 @@
   }
 
   .header {
+    position: fixed;
     height: var(--header-height);
     width: 100%;
     padding-left: var(--container-padding-big);
