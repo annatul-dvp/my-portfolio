@@ -571,7 +571,7 @@ html {
 	flex-direction: column;
 	flex-grow: 1;
 	flex-basis: 45%;
-	font-size: 2vh;
+	font-size: 1.8vh;
 	font-weight: 400;
 	padding-right: 1.5vw;
 	cursor: default;
@@ -611,6 +611,10 @@ html {
 	border-radius: 20px;
 	border: 20px solid var(--white-color);
 	overflow: hidden;
+}
+
+.info-slide-img-minus-one {
+	background: center / cover no-repeat url(../imgs/vue3-kanban-system.webp);
 }
 
 .info-slide-img-zero, .info-slide-img-one {
